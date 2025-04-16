@@ -128,43 +128,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Fade-in Animation on Scroll --- //
-    // Wait 3.5 seconds before setting up the observer
-    setTimeout(() => {
-        const animatedElements = document.querySelectorAll('.animated-slide-item');
+    // Add 'animated-slide-item' class to all elements to be animated
+    const animatedElements = document.querySelectorAll('.animated-slide-item');
 
-        if ("IntersectionObserver" in window) {
-            const observerOptions = {
-                root: null, // viewport
-                rootMargin: '0px',
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            };
+    if ("IntersectionObserver" in window) {
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // DO NOT unobserve here, we want it to trigger again
-                        // observer.unobserve(entry.target);
-                    } else {
-                        // Remove class when element is NOT intersecting
-                        entry.target.classList.remove('visible');
-                    }
-                });
-            }, observerOptions);
-
-            animatedElements.forEach(el => {
-                observer.observe(el);
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // DO NOT unobserve here, we want it to trigger again
+                    // observer.unobserve(entry.target);
+                } else {
+                    // Remove class when element is NOT intersecting
+                    entry.target.classList.remove('visible');
+                }
             });
-        } else {
-            // Fallback for older browsers: Make all animated items visible immediately
-            document.querySelectorAll('.animated-slide-item').forEach(el => {
-                el.classList.add('visible');
-            });
-        }
-    }, 3500); // 3.5 second delay
+        }, observerOptions);
 
-    // --- Testimonial Slider (REMOVED) --- //
-    /*
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
+    } else {
+        // Fallback for older browsers: Make all animated items visible immediately
+        document.querySelectorAll('.animated-slide-item').forEach(el => {
+            el.classList.add('visible');
+        });
+    }
+
+    // --- Testimonial Slider --- //
     const slidesContainer = document.querySelector('.testimonial-slides');
     const slides = document.querySelectorAll('.testimonial-slides .testimonial-card');
     let currentSlide = 0;
@@ -239,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
          console.log("Testimonial slider requires more than one slide or elements not found.");
     }
-    */
 
      // --- Form Submission Placeholder --- //
      const contactForm = document.querySelector('.contact-form form');

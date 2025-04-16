@@ -1,0 +1,75 @@
+# Dream Dungeon - Task List
+
+## Core Implementation Tasks
+
+- [x] Basic HTML Structure (`index.html`)
+- [x] Basic CSS Styling (`style.css`)
+- [x] Core Game State Management (`script.js`)
+- [x] Player Stat Display
+- [x] Floor Setup Logic (Basic)
+- [x] Procedural Map Generation (Prim's Algorithm)
+- [x] Map Rendering (Walls, Floors, Player Marker, Basic FoW)
+- [x] Player Movement (WASD/Arrows, Wall Collision)
+- [x] Basic Combat Loop (Auto-attack based on Speed)
+- [x] Timed Attack Mechanic (Input, Basic Bonus)
+- [x] Enemy Creation (Basic Scaling)
+- [x] Combat Initiation & End Conditions (Win/Loss)
+- [x] XP Gain & Level Up (Base Stats + Choice UI)
+- [x] Basic Room Encounter Logic (Enemy, Exit)
+- [x] Basic Reaper Trigger (On 0 Moves)
+- [x] Game Over & Victory Screens
+- [x] Combat Animations (Placeholders)
+- [ ] **Item System:**
+    - [ ] Item Database (Adapt all items from design doc)
+    - [ ] Equip/Unequip Logic
+    - [ ] Item Stat Application (Passive)
+    - [ ] Item Effect Application (Triggered - Timed Hit, On Hit, Combat Start/End etc.)
+    - [ ] Item UI Display (Player Stats Panel)
+- [ ] **Treasure Room:**
+    - [ ] Implement Stat Boost Reward (Scaling with floor)
+    - [ ] Implement Item Reward (Generate item based on floor rarity)
+- [ ] **Shop Room:**
+    - [ ] Generate Items for Sale (Based on floor rarity, cost)
+    - [ ] Implement Item Purchase Logic (Gold cost)
+    - [ ] Implement Item Upgrade Logic (Gold cost, random stat boost)
+    - [ ] Implement Level Up Boost Purchase
+    - [ ] Implement Reroll Logic (Free/Cost)
+    - [ ] Implement Buy Moves Logic
+- [ ] **Combat System Refinement:**
+    - [ ] Implement Status Effects (Burn, Poison - application, ticking damage, duration, UI)
+    - [ ] Refine Damage Formula (Based on design doc `Damage * (1 - Defence / (Defence + 100))`)
+    - [ ] Implement Crit Damage Variation (150-200%)
+    - [ ] Implement Weapon Special Attacks (Triggered by timed hits)
+    - [ ] Implement Elite Enemy Abilities/Traits
+    - [ ] Implement Exit Guardian Fights (Unique guardians?)
+    - [ ] Implement Final Boss Mechanics (Reaper Revive)
+    - [ ] Implement Heal Stat Functionality (Passive regen? Heal effectiveness?)
+    - [ ] Implement `Death's Touch` Trait Effect
+    - [ ] Handle Multiple Enemies in a Room (Targeting? AoE?)
+- [ ] **Event Room:**
+    - [ ] Implement more diverse event outcomes (Healing, Curses, Mini-games?)
+- [ ] **Scaling Implementation:**
+    - [ ] Implement accurate Enemy Stat Scaling (from table)
+    - [ ] Implement accurate Item Rarity Scaling (from table)
+    - [ ] Implement accurate Treasure Stat Bonus Scaling (from table)
+    - [ ] Implement accurate Score Multiplier (from table)
+    - [ ] Implement accurate Moves Per Floor (from table)
+    - [ ] Implement accurate Min Exit Distance (from table)
+- [ ] **Map Generation Refinement:**
+    - [ ] Ensure all rooms are potentially reachable (Prim's should guarantee this, but double-check)
+    - [ ] Consider different generation algorithms or variations?
+
+## Potential Improvements & Future Features
+
+- [ ] New Game+ Mode
+- [ ] More Enemy Variety (Ranged, Healers, Summoners)
+- [ ] Additional Persistent Traits/Unlocks
+- [ ] Improved UI/UX (Better map tiles, combat sprites, indicators)
+- [ ] Sound Effects & Music
+- [ ] Mobile Swipe Controls
+- [ ] Save/Load Game State (Local Storage)
+- [ ] Settings Menu (Volume, etc.)
+- [ ] More sophisticated Fog of War (e.g., line of sight)
+- [ ] Accessibility Features (Colorblind modes, font size options)
+- [ ] Tutorial System
+- [ ] Leaderboards 
