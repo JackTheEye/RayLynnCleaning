@@ -24,7 +24,7 @@
         display: none; /* Hide desktop menu */
     }
     .mobile-menu-toggle {
-        display: block; /* Show mobile menu toggle */
+        /* display: block; REMOVE - Hide non-functional button */
         font-size: 1.8rem; /* Ensure toggle is easily tappable */
     }
     
